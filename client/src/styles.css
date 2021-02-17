@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #1a202c;
+  color: white;
+  font-family: "Cutive Mono", monospace;
+  overflow-x: hidden;
+}
+.intro,
+.intro_heading {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.intro {
+  /* backdrop-filter: blur(1px); */
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.intro_heading {
+  background-color: #11141cd3;
+  text-align: center;
+  height: 30%;
+  width: 80%;
+  padding: 5px;
+}
+.intro_heading h1 {
+  word-spacing: -25px;
+}
+#canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  filter: blur(2px);
+}
+
+.rotate {
+  -moz-transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(1, 1);
+  color: red;
+}
+
+@media screen and (max-width: 500px) {
+  .intro_heading {
+    height: auto;
+    font-size: 18px;
+  }
+  .intro_heading h1 {
+    word-wrap: break-word;
+  }
+}
